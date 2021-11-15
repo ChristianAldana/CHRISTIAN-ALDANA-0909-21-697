@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--CHRISTIAN ALDANA 0909-21-697  -->
+<!--Encabezado  -->
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>ENVIO PAQUETES</title>
+      <!-- Titulo de la pagina  -->
+      <link rel="stylesheet" href="serie1.css" />
+      <!-- conexión con CSS -->
+   </head>
+   <body>
+      <!-- TITULO EMPRESA  -->
+      <div class="container">
+         <div class="navbar">
+            <div class="menu">
+               <h3 class="logo">EMPRESA<span> P&P</span></h3>
+               <!-- Logo de inicio -->
+               <div class="hamburger-menu">
+                  <div class="bar"></div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Funcion principal texto de información -->
+         <div class="main-container">
+            <div class="main">
+               <header>
+                  <div class="overlay">
+                     <div class="inner">
+                        <h2 class="title">INGRESE PESO PAQUETE</h2>
+                        <!-- Titulo principal-->
+                        <br>
+                        <p>
+                           <tr>  <!--EL USUARIO TIENE QUE INGRESAR EL PESO DEL PAQUETE-->
+                        <td>Ingrese PESO PAQUETE 
+                        <input type="number" name="a_001" id="a_001"> <!-- Identifying frame one -->
+                        <td>
+                        <br>
+                        <br> <!--EL USUARIO TIENE QUE INGRESAR LOS KM DEL PAQUETE-->
+                        <h2 class="title">INGRESE LA CANTIDAD DE KM A ENVIAR EL PAQUETE</h2> <!-- Titulo principal de bienv nida-->
+                        <ul>
+                        <li> Guatemala 10 kms.</li> 
+                        <li> Izabal 300 kms.</li> 
+                        <li>Peten 460 kms.</li>
+                        <li>Chiquimula 178 kms. </li> 
+                        <li>Retalhuleu 200 kms.</li> 
+                        <br>
+                        <tr> 
+                        <td>Ingrese los KMS.  <!--EL USUARIO TIENE QUE INGRESAR LOS KM DEL PAQUETE-->
+                        <input type="number" name="a_001" id="a_002"> <!-- Identifying frame one -->
+                        <br>
+                        <td>
+                        <input type="button" id="boton" value="CALCULAR MONTO A PAGAR " onclick="PesoReal1()"> <!-- Identifying the button box -->
+                        <del>
+                        </del>
+                        </p>
+                        </ul>
+                        </td>
+                        </tr>
+                        </td>
+                        </tr>
+                        </del>
+                     </div>
+                  </div>
+               </header>
+            </div>
+            <div class="shadow one"></div>
+            <!-- MITAD 1 COLOR GRIS -->
+            <div class="shadow two"></div>
+            <!--MITAD 2 COLOR AQUA -->
+         </div>
+         <div class="links">
+            <!-- Links de opciones -->
+            <ul>
+               <li>
+                  <a href="serie1.html" style="--i: 0.25s;">VOLVER AL MENU</a> <!-- Link a información -->
+            </ul>
+         </div>
+      </div>
+      <script>
+         function PesoReal1() { //Function to operate in this program
+         
+            var PesoReal = parseInt(document.getElementById('a_001').value); //variable para peso real
+            var PesoReal2 = parseInt(document.getElementById('a_002').value); //variable para los km
+         
+            var result_01 = (PesoReal * 2.5) ; //Operacion del peso * 2.5
+            var resultkm = (PesoReal2 * 0.13) //Operacion de los km * 0.13
+            var result_Total = (result_01 + resultkm) ;  //RESULTADO DEL TOTAL A PAGAR
+            
+            alert ('El monto a pagar por el peso kg es de:' +result_01)
+            alert ('El monto a pagar por los km recorridos es de:' +resultkm)
+            alert ('El monto a total a pagar es de: '  +result_Total); 
+         
+         }
+      </script>
+      <script src="serie1.js"></script> <!-- Conexion con JAVASCRIPT --> 
+   </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--CHRISTIAN ALDANA 0909-21-697  -->
+<!--Encabezado  -->
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>ENVIO PAQUETES</title>
+      <!-- Titulo de la pagina  -->
+      <link rel="stylesheet" href="serie1.css" />
+      <!-- conexión con CSS -->
+
+   </head>
+   <body>
+      <!-- Opciones a escoger  -->
+      <div class="container">
+         <div class="navbar">
+            <div class="menu">
+               <h3 class="logo">EMPRESA<span> P&P</span></h3>
+               <!-- Logo de inicio -->
+               <div class="hamburger-menu">
+                  <div class="bar"></div>
+               </div>
+            </div>
+         </div>
+         <!-- TITULO PRINCIPAL -->
+         <div class="main-container">
+            <div class="main">
+               <header>
+                  <div class="overlay">
+                     <div class="inner">
+                        <h2 class="title">Ingrese medidas del paquete </h2>  <!-- INGRESAR LAS MEDIDAS PARA SACAR EL PESO VOLUMETRICO-->
+                        <!-- Titulo principal de bienv nida-->
+                        <br>
+                        <p>
+                           <tr>
+                        <td>Largo del paquete <!-- LARGO PAQUETE-->
+                        <input type="number" name="a_001" id="a_003"> <!-- Identifying frame one -->
+                        <td>
+                            <br> 
+                            <tr>
+                                <td>Ancho del paquete <!-- ANCHO PAQUETE-->
+                                <input type="number" name="a_001" id="a_004"> <!-- Identifying frame one -->
+                                <td>
+                                    <tr>
+                                        <br>
+                                        <td>Alto del paquete <!-- ALTO PAQUETE-->
+                                        <input type="number" name="a_001" id="a_005"> <!-- Identifying frame one -->
+                                        <td>
+
+                        <br>
+                        <br>
+                        <h2 class="title">INGRESE LA CANTIDAD DE KM A ENVIAR EL PAQUETE</h2> <!-- LISTA A LAS SEDES A ENVIAR-->
+                        <ul>
+                        <li> Guatemala 10 kms.</li>    
+                        <li> Izabal 300 kms.</li> 
+                        <li>Peten 460 kms.</li>
+                        <li>Chiquimula 178 kms. </li> 
+                        <li>Retalhuleu 200 kms.</li> 
+                        <br>
+                        <tr>
+                        <td>Ingrese los KMS.  <!-- USUARIO TIENE QUE INGRESAR LOS KMS-->
+                        <input type="number" name="a_001" id="a_002"> <!-- AQUI SE VA A GUARDAR EL USUARIO -->
+                        <br>
+                        <td>
+                        <input type="button" id="boton" value="CALCULAR MONTO A PAGAR " onclick="PesoVolum()"> <!-- TOTAL A PAGAR -->
+                        <del>
+                        </del>
+                        </p>
+                        </ul>
+                        </td>
+                        </tr>
+                        </td>
+                        </tr>
+                        </del>
+                     </div>
+                  </div>
+               </header>
+            </div>
+            <div class="shadow one"></div>
+            <!-- MITAD 1 COLOR GRIS -->
+            <div class="shadow two"></div>
+            <!--MITAD 2 COLOR AQUA -->
+         </div>
+         <div class="links">
+            <!-- Links de opciones -->
+            <ul>
+               <li>
+                  <a href="serie1.html" style="--i: 0.25s;">VOLVER AL MENU</a> <!-- Link a información -->
+            </ul>
+         </div>
+      </div>
+      <script>
+         function PesoVolum() { //Function to operate in this program
+         
+            var LargoPaquet = parseInt(document.getElementById('a_003').value); //VARIABLE ALTO
+            var AnchoPaquet = parseInt(document.getElementById('a_004').value); // VARIABLE ANCHO
+            var AltoPaquet = parseInt(document.getElementById('a_005').value); // VARIABLE ALTO
+            var totalKm = parseInt(document.getElementById('a_002').value); // VARIABLE TOTAL DE KMS
+
+            var PesoVolumetrico = (LargoPaquet * AnchoPaquet * AltoPaquet / 2272) //FORMULA PARA SACAR EL PESO VOLUMETRICO
+            var PesoVolumetrico1 =( PesoVolumetrico * 2.5) //FORMULA PARA SACAR EL PESO VOLUMETRICO DEL PAQUETE
+            var TotalKm = (totalKm * 0.13) //FORMULA PARA LOS KMS RECORRIDO S
+            var result_Total = (TotalKm + PesoVolumetrico1) //VARIABLE DE CUANTO ES EN TOTAL.
+
+            alert ('El monto a total a pagar por envio de paquete es de: '  +result_Total); 
+         
+         }
+      </script>
+      <script src="serie1.js"></script> <!-- Conexion con JAVASCRIPT --> 
+   </body>
+</html>

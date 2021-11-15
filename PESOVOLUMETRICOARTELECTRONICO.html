@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--CHRISTIAN ALDANA 0909-21-697  -->
+<!--Encabezado  -->
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>ENVIO ART ELECTRONICOS</title>
+      <!-- Titulo de la pagina  -->
+      <link rel="stylesheet" href="serie1.css" />
+      <!-- conexión con CSS -->
+
+   </head>
+   <body>
+      <!-- Opciones a escoger  -->
+      <div class="container">
+         <div class="navbar">
+            <div class="menu">
+               <h3 class="logo">EMPRESA<span> P&P</span></h3>
+               <!-- Logo de inicio -->
+               <div class="hamburger-menu">
+                  <div class="bar"></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="main-container">
+            <div class="main">
+               <header>
+                  <div class="overlay">
+                     <div class="inner">
+                        <h2 class="title">Ingrese medidas del Art. Electronicos  </h2>
+                        <!-- LE PIDE AL USUARIO INGRESAR LAS MEDIDAS ART-->
+                        <br>
+                        <p>
+                           <tr>
+                        <td>Largo del Art.Electronico
+                        <input type="number" name="a_001" id="a_003"> <!-- LARGO DEL ART. -->
+                        <td>
+                            <br> 
+                            <tr>
+                                <td>Ancho del Art.Electronico
+                                <input type="number" name="a_001" id="a_004"> <!-- ANCHO DEL ART. -->
+                                <td>
+                                    <tr>
+                                        <br>
+                                        <td>Alto del Art.Electronico
+                                        <input type="number" name="a_001" id="a_005"> <!-- ALTO  DEL ART. -->
+                                        <td>
+
+                        <br>
+                        <br>
+                        <h2 class="title">INGRESE LA CANTIDAD DE KM A ENVIAR LOS ART.ELETRCONICOS</h2> <!-- LISTA DE LOS KMS-->
+                        <ul>
+                        <li> Guatemala 10 kms.</li>    
+                        <li> Izabal 300 kms.</li> 
+                        <li>Peten 460 kms.</li>
+                        <li>Chiquimula 178 kms. </li> 
+                        <li>Retalhuleu 200 kms.</li> 
+                        <br>
+                        <tr>
+                        <td>Ingrese los KMS. 
+                        <input type="number" name="a_001" id="a_002"> <!-- BOTON QUE GUARDA LOS KMS -->
+                        <br>
+                        <td>
+                        <input type="button" id="boton" value="CALCULAR MONTO A PAGAR " onclick="PesoVolum()"> <!-- BOTON PARA EL TOTAL -->
+                        <del>
+                        </del>
+                        </p>
+                        </ul>
+                        </td>
+                        </tr>
+                        </td>
+                        </tr>
+                        </del>
+                     </div>
+                  </div>
+               </header>
+            </div>
+            <div class="shadow one"></div>
+            <!-- MITAD 1 COLOR GRIS -->
+            <div class="shadow two"></div>
+            <!--MITAD 2 COLOR AQUA -->
+         </div>
+         <div class="links">
+            <!-- Links de opciones -->
+            <ul>
+               <li>
+                  <a href="serie1.html" style="--i: 0.25s;">VOLVER AL MENU</a> <!-- Link a información -->
+            </ul>
+         </div>
+      </div>
+      <script>
+         function PesoVolum() { //Function to operate in this program
+         
+            var Largo = parseInt(document.getElementById('a_003').value); // // VARIABLE LARGO
+            var Ancho = parseInt(document.getElementById('a_004').value);  // VARIABLE ANCHO
+            var Alto = parseInt(document.getElementById('a_005').value); //  VARIABLE ALTO
+            var totalKm = parseInt(document.getElementById('a_002').value);  // VARIABLE KMS
+
+            var PesoVolumetrico = (Largo * Ancho * Alto / 2272) //FORMULA PARA EL PESOVOLUMETRICO
+            var PesoVolumetrico1 =( PesoVolumetrico * 2.5) //VARIABLE PESOVOLUMETRICO
+            var TotalKm = (totalKm * 0.13) //VARIABLE PARA LOS KMS
+            var result_Total = (TotalKm + PesoVolumetrico1) //VARIABALE TOTAL
+
+            alert ('El monto a total a pagar por envio del Art. Electronico es de: '  +result_Total); 
+         
+         }
+      </script>
+      <script src="serie1.js"></script> <!-- Conexion con JAVASCRIPT --> 
+   </body>
+</html>
