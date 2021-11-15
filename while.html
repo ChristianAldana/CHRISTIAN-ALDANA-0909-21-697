@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--CHRISTIAN ALDANA 0909-21-697-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICLO WHILE</title>
+    <body background="https://s.tmimgcdn.com/scr/1200x750/60000/tema-de-shopify-para-regalos-de-frutas_60086-original.jpg">
+
+</head>
+
+<body>
+    <script>
+        const carrito = []
+        const fruta = prompt(' Feria Market  ¿qué fruta desea comprar?')
+
+        carrito.push(fruta)
+
+        while (confirm('¿Desea agregar otro elemento al 🛒?')) {
+            const fruta = prompt('¿qué fruta desea comprar?')
+            carrito.push(fruta)
+        }
+
+        console.log('Ustede compró: ')
+        for (let fruta of carrito) {
+            console.log(fruta)
+        }
+    </script>
+</body>
+    
+</html>

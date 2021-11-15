@@ -1,0 +1,37 @@
+
+/* <!--CHRISTIAN ALDANA 0909-21-697-->*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(34, 34, 34);
+    font-family:sans-serif;
+}
+
+h1{
+    margin-top: 20px;
+    color:#fff;
+    text-align: center;
+}
+
+section{
+    width: 100%;
+    height: calc(100vh - 57px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+article{
+    padding: 20px;
+    width: 200px;
+    height: 220px;
+    color: #fff;
+    font-size: 1rem;
+    background-color: rgba(160, 0, 200, 0.739);
+}
